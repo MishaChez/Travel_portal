@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -30,8 +31,24 @@ html {
 }
 
 /* make sure to set some focus styles for accessibility */
-:focus {
+:focus, :active {
   outline: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav, footer, header, aside {
+  display: block;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -491,7 +508,6 @@ textarea {
 
 /*---------------------------------------------------------------------------------------------------*/
 .header {
-  height: 200px;
   background: url("../img/header_bg.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -500,23 +516,20 @@ textarea {
 .header__top {
   background-color: rgba(242, 120, 92, 0.7);
 }
+.header__bottom {
+  padding: 32px 0 0 0;
+}
+
 .header-top__logo-nav {
   padding: 26px 0 24px;
   display: flex;
   justify-content: space-between;
-}
-.header-top__logo {
-  font-family: "Magra";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 39px;
-  color: #FFFFFF;
+  align-items: center;
 }
 .header-top__button {
   display: block;
   background: #0D606F;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
   border-radius: 10px;
 }
 .header-top__button p {
@@ -529,10 +542,36 @@ textarea {
   color: #FFFFFF;
 }
 
-.menu_list {
+.logo__link {
   display: flex;
 }
-.menu_list li a {
+.logo__pic {
+  display: block;
+  margin: 0 6px 0 0;
+}
+.logo__text {
+  display: block;
+  font-family: "Magra";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 31px;
+  color: #FFFFFF;
+}
+
+.menu__list {
+  display: flex;
+}
+.menu__list li {
+  margin: 0 21px;
+}
+.menu__list li:first-child {
+  margin: 0 21px 0 0;
+}
+.menu__list li:last-child {
+  margin: 0 0 0 21px;
+}
+.menu__link {
   font-family: "Red Hat Text";
   font-style: normal;
   font-weight: 500;
@@ -541,7 +580,13 @@ textarea {
   color: #FFFFFF;
 }
 
-.header-bottom__title h1 {
+.header-bottom-blog {
+  margin: 0 308px 254px 0;
+}
+.header-bottom-blog__title {
+  margin: 0 0 58px 0;
+}
+.header-bottom-blog__title h1 {
   font-family: "Aleo";
   font-style: normal;
   font-weight: 700;
@@ -549,7 +594,10 @@ textarea {
   line-height: 96px;
   color: #FFFFFF;
 }
-.header-bottom__title p {
+.header-bottom-blog__subtitle {
+  margin: 0 0 46px 0;
+}
+.header-bottom-blog__subtitle p {
   font-family: "Aleo";
   font-style: italic;
   font-weight: 700;
@@ -557,13 +605,16 @@ textarea {
   line-height: 24px;
   color: #FFFFFF;
 }
-.header-start__text p {
-  font-family: "Aleo";
-  font-style: italic;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-  color: #F2785C;
+.header-start {
+  margin: 0 0 33px 0;
+}
+.header-start__btn {
+  width: 228px;
+  height: 59px;
+  padding: 13.5px 32.5px;
+  background: #0D606F;
+  box-shadow: 0 0 3px rgba(13, 96, 111, 0.08), 0 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
 }
 .header-start__btn p {
   font-family: "Red Hat Text";
@@ -574,6 +625,53 @@ textarea {
   color: #FFFFFF;
 }
 
+.search-start__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  padding: 18px;
+}
+.search-start__field {
+  margin: 0 23px;
+  background: transparent;
+  border: 0;
+  width: 560px;
+  font-family: "Aleo";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #F2785C;
+}
+.search-start__field::placeholder {
+  font-family: "Aleo";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #F2785C;
+}
+.search-start__submit {
+  border: 0;
+  width: 228px;
+  height: 59px;
+  padding: 13.5px 32.5px;
+  background: #0D606F;
+  box-shadow: 0 0 3px rgba(13, 96, 111, 0.08), 0 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
 .footer {
   height: 100px;
   background: black;

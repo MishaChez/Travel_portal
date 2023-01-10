@@ -30,8 +30,24 @@ html {
 }
 
 /* make sure to set some focus styles for accessibility */
-:focus {
+:focus, :active {
   outline: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav, footer, header, aside {
+  display: block;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -568,6 +584,8 @@ textarea {
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap');
+
 
 /*---------------------------------------------------------------------------------------------------*/
 
@@ -605,7 +623,7 @@ textarea {
 
 
 .header {
-  height: 200px;
+
   background: url("../img/header_bg.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -613,10 +631,13 @@ textarea {
   // .header__top
   &__top {
     background-color: rgba(242,120,92,0.7);
+
   }
 
   // .header__bottom
   &__bottom {
+    padding: 32px 0 0 0;
+
   }
 }
 
@@ -626,17 +647,14 @@ textarea {
     padding: 26px 0 24px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   // .header-top__logo
   &__logo {
-    font-family: 'Magra';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 39px;
-    color: #FFFFFF;
   }
+
+
 
   // .header-top__menu
   &__menu {
@@ -646,7 +664,7 @@ textarea {
   &__button {
     display: block;
     background: #0D606F;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     p{
       margin: 10px 30px;
@@ -661,34 +679,74 @@ textarea {
   }
 }
 
-.menu {
-  // .menu_body
-  &_body {
+.logo {
+
+  // .logo__link
+  &__link {
+    display: flex;
   }
 
-  // .menu_list
-  &_list {
+  // .logo__pic
+  &__pic {
+    display: block;
+    margin: 0 6px 0 0;
+  }
+
+  // .logo__text
+  &__text {
+    display: block;
+    font-family: 'Magra';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 31px;
+    color: #FFFFFF;
+  }
+}
+
+.menu {
+  // .menu__body
+  &__body {
+  }
+
+  // .menu__list
+  &__list {
     display: flex;
 
-    li{
+    li {
+      margin: 0 21px;
 
-      a{
-        font-family: 'Red Hat Text';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 21px;
-        color: #FFFFFF;
+      &:first-child {
+        margin: 0 21px 0 0;
+      }
+
+      &:last-child {
+        margin: 0 0 0 21px;
       }
     }
+
+
+  }
+  // .menu__link
+  &__link {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
   }
 }
 
 
 
-.header-bottom {
-  // .header-bottom__title
+
+
+.header-bottom-blog {
+  margin: 0 308px 254px 0;
+  // .header-bottom-blog__title
   &__title {
+    margin: 0 0 58px 0;
     h1{
       font-family: 'Aleo';
       font-style: normal;
@@ -697,6 +755,12 @@ textarea {
       line-height: 96px;
       color: #FFFFFF;
     }
+
+  }
+
+  // .header-bottom-blog__subtitle
+  &__subtitle {
+    margin: 0 0 46px 0;
     p{
       font-family: 'Aleo';
       font-style: italic;
@@ -707,27 +771,34 @@ textarea {
     }
   }
 
-  // .header-bottom__start
+  // .header-bottom-blog__start
   &__start {
   }
 }
 
+
+
+
+
 .header-start {
+  margin: 0 0 33px 0;
   // .header-start__text
   &__text {
     p{
-      font-family: 'Aleo';
-      font-style: italic;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 29px;
-      color: #F2785C;
+
     }
   }
 
   // .header-start__btn
   &__btn {
+    width: 228px;
+    height: 59px;
+    padding: 13.5px 32.5px;
+    background: #0D606F;
+    box-shadow: 0 0 3px rgba(13, 96, 111, 0.08), 0 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
     p{
+
       font-family: 'Red Hat Text';
       font-style: normal;
       font-weight: 500;
@@ -737,6 +808,100 @@ textarea {
     }
   }
 }
+
+.search-start {
+  // .search-start__wrap
+  &__wrap {
+  }
+
+  // .search-start__info
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    padding: 18px;
+  }
+
+  // .search-start__field
+  &__field {
+    margin: 0 23px;
+    background: transparent;
+    border: 0;
+    width: 560px;
+
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2785C;
+
+
+    &::placeholder{
+      font-family: 'Aleo';
+      font-style: italic;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: #F2785C;
+
+
+    }
+  }
+
+  // .search-start__submit
+  &__submit {
+    border: 0;
+    width: 228px;
+    height: 59px;
+    padding: 13.5px 32.5px;
+    background: #0D606F;
+    box-shadow: 0 0 3px rgba(13, 96, 111, 0.08), 0 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+  }
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+.steps {
+  // .steps__body
+  &__body {
+  }
+
+  // .steps__title
+  &__title {
+  }
+
+  // .steps__content
+  &__content {
+  }
+
+  // .steps__item
+  &__item {
+  }
+}
+
+.steps-item {
+  // .steps-item__icon
+  &__icon {
+  }
+
+  // .steps-item__text
+  &__text {
+  }
+}
+
+/*---------------------------------------------------------------------------------------------------*/
 
 
 

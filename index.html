@@ -13,19 +13,19 @@
             <div class="header__top header-top">
                 <div class="container">
                     <div class="header-top__logo-nav">
-                        <div class="header-top__logo">
-                            <a href="#">
-                                <img alt="#" src="img/header_logo.png" height="30" width="30"/>
-                                Travel Portal
+                        <div class="header-top__logo logo">
+                            <a href="#" class="logo__link">
+                                <img alt="#" class="logo__pic" src="img/header_logo.png" height="30" width="30"/>
+                                <p class="logo__text">Travel Portal</p>
                             </a>
                         </div>
                         <nav class="header-top__menu menu">
-                            <div class="menu_body">
-                                <ul class="menu_list">
-                                    <li><a href="#">How It Works</a></li>
-                                    <li><a href="#">Plan Your Trip</a></li>
-                                    <li><a href="#">Destinations</a></li>
-                                    <li><a href="#">Travel Stories</a></li>
+                            <div class="menu__body">
+                                <ul class="menu__list">
+                                    <li><a class="menu__link" href="#">How It Works</a></li>
+                                    <li><a class="menu__link" href="#">Plan Your Trip</a></li>
+                                    <li><a class="menu__link" href="#">Destinations</a></li>
+                                    <li><a class="menu__link" href="#">Travel Stories</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -35,24 +35,62 @@
                     </div>
                 </div>
             </div>
-            <div class="header__bottom header-bottom">
+            <div class="header__bottom ">
                 <div class="container">
-                    <div class="header-bottom__title">
-                        <h1>Explore the beauty of the World</h1>
-                        <p>Receive personalized recommendations for countries, hotels, activities and more</p>
-                    </div>
-                    <div class="header-bottom__start header-start">
-                        <div class="header-start__text">
-                            <p>What would you like to do?</p>
+                    <div class="header-bottom-blog">
+                        <div class="header-bottom-blog__title">
+                            <h1>Explore the beauty of the World</h1>
                         </div>
-                        <div class="header-start__btn">
-                            <p>Start Planning</p>
+                        <div class="header-bottom-blog__subtitle">
+                            <p>Receive personalized recommendations for countries, hotels, activities and more</p>
                         </div>
+                        <form class="header-bottom-blog__start search-start">
+                            <fieldset class="search-start__wrap">
+                                <p class="search-start__info">
+
+                                    <input type="text" name="user-like-to-do" class="search-start__field" placeholder="What would you like to do?">
+                                    <button type="submit" class="search-start__submit">Start Planning</button>
+                                </p>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </div>
         </header>
-        <div class="content"></div>
+        <div class="content">
+            <section class="steps">
+                <div class="container">
+                    <div class="steps__body">
+                        <div class="steps__title"></div>
+                        <div class="steps__content">
+                            <div class="steps__item steps-item">
+                                <div class="steps-item__icon">
+                                    <img src="img/steps/icon1.png" height="45" width="50" alt="#"/></div>
+                                <p class="steps-item__text">
+                                    Tell us what you want to do
+                                </p>
+                            </div>
+                            <div class="steps__item steps-item">
+                                <div class="steps-item__icon">
+                                    <img src="img/steps/icon2.png" height="52" width="52" alt="#"/></div>
+                                <p class="steps-item__text">
+                                    Share us preferable dates
+                                </p>
+                            </div>
+                            <div class="steps__item steps-item">
+                                <div class="steps-item__icon">
+                                    <img src="img/steps/icon3.png" height="45" width="60" alt="#"/></div>
+                                <p class="steps-item__text">
+                                    We will give you recommendations
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="destinations"></section>
+            <section class="stories"></section>
+        </div>
         <footer class="footer"></footer>
     </main>
 </div>
