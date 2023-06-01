@@ -498,7 +498,6 @@ textarea {
 
 .content {
   flex: 1 1 auto;
-  background: green;
 }
 
 .container {
@@ -671,10 +670,56 @@ textarea {
 }
 
 /*---------------------------------------------------------------------------------------------------*/
+.title-content {
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 53px;
+  color: #F2785C;
+  text-align: center;
+}
+
+.text-content {
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0D606F;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+.steps {
+  padding: 80px 0 97px;
+}
+.steps__title {
+  margin: 0 0 40px;
+}
+.steps__content {
+  display: flex;
+  justify-content: space-between;
+}
+.steps__item {
+  flex: 0 0 33.3%;
+}
+
+.steps-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  width: 100px;
+  height: 100px;
+  background: #F2785C;
+  border-radius: 16px;
+}
+.steps-item__text {
+  text-align: center;
+}
+
 /*---------------------------------------------------------------------------------------------------*/
 .footer {
   height: 100px;
   background: black;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
